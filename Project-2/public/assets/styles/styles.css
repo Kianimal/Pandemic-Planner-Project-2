@@ -6,10 +6,25 @@ body{
   background-color: rgba(119, 117, 117, 0.7);
   font-family: 'monDM Mono', monospace; 
 }
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  /* background-color: #ddd; Grey background */
+}
+#img{
+  margin-right: 500px;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: #4CAF50;} /* Green */
 h1{
-  text-align: center;
-  font-size: 50px;
-  
+  text-align: center; 
 }
 h1 p{
   font-family: 'Nanum Brush Script', cursive;
@@ -37,4 +52,14 @@ nav{
 }
 .sidenav li>a{
   color:white;
+}
+.nav-link{
+  color: black;
+}
+button{
+  background-color:black; 
+  border-color:black;
+}
+.footer-copyright{
+  text-align:center;
 }
