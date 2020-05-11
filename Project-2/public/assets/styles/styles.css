@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  color: white;
+  background-color: rgba(119, 117, 117, 0.7);
+  font-family: 'monDM Mono', monospace; 
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  
+}
+h1 p{
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 100px;
+  font-weight: bold;
+  color: green;
+}
+h2{
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+.page-footer{
+  background-color: black;
+}
+
+nav{
+  background-color: black;
+  padding-bottom: 20px;
+}
+.sidenav{
+  background-color: black;
+  
+}
+.sidenav li>a{
+  color:white;
+}
