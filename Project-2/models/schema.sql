@@ -4,22 +4,22 @@ CREATE database prepDB;
 USE prepDB;
 
 CREATE TABLE users(
-  user_id INT AUTO_INCREMENT NOT NULL,
+  userId INT AUTO_INCREMENT NOT NULL,
   username VARCHAR(255),
-  user_pass VARCHAR(255),
-  score_val INT(10) NOT NULL,
-  self_scored_1 INT(10),
-  self_scored_2 INT(10),
-  self_scored_3 INT(10),
-  self_scored_4 INT(10),
-  self_scored_5 INT(10),
-  inventory_1 INT(10),
-  inventory_2 INT(10),
-  inventory_3 INT(10),
-  inventory_4 INT(10),
-  inventory_5 INT(10),
-  evac_plan BOOLEAN NOT NULL,
-  trade_status BOOLEAN NOT NULL,
+  -- user_pass VARCHAR(255),
+  scoreVal INT(10) NOT NULL,
+--   self_scored_1 INT(10),
+--   self_scored_2 INT(10),
+--   self_scored_3 INT(10),
+--   self_scored_4 INT(10),
+--   self_scored_5 INT(10),
+--   inventory_1 INT(10),
+--   inventory_2 INT(10),
+--   inventory_3 INT(10),
+--   inventory_4 INT(10),
+--   inventory_5 INT(10),
+--   evac_plan BOOLEAN NOT NULL,
+--   trade_status BOOLEAN NOT NULL,
   PRIMARY KEY (user_id)
 );
 

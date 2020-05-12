@@ -6,14 +6,14 @@ var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveExample: function(user) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
       url: "api/examples",
-      data: JSON.stringify(example)
+      data: JSON.stringify(user)
     });
   },
   getExamples: function() {
@@ -22,9 +22,9 @@ var API = {
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteExample: function(userid) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/examples/" + userid,
       type: "DELETE"
     });
   }
@@ -35,8 +35,8 @@ var refreshExamples = function() {
   API.getExamples().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(example.username)
+        .attr("href", "/example/" + example.userid);
 
       var $li = $("<li>")
         .attr({
@@ -66,10 +66,10 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    username: $exampleDescription.val().trim()
   };
 
-  if (!(example.text && example.description)) {
+  if (!(example.text && example.username)) {
     alert("You must enter an example text and description!");
     return;
   }

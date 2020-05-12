@@ -17,9 +17,9 @@
         </form>
         <h3>Examples:</h3>
         <ul id="example-list" class="list-group">
-          {{#each examples}}
+          {{#each users}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="user/{{this.username}}">{{this.username}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
@@ -31,35 +31,3 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-
-{{!-- TOP 5 OR 10 ITEMS (HARD/SOFT) What are they based on the CDC document? }}
-{{! 
-    ITEM 1= ? 
-    ITEM 2= ?
-    ITEM 3= ?
-    ITEM 4= ?
-    ITEM 5= ? 
-}}
-    
-{{!-- Item 1: 1*= , 2*= , 3*= , 4*= , 5*=  }}
-
-{{!-- Item 2: 1*= , 2*= , 3*= , 4*= , 5*=  }}
-
-{{!-- Item 3: 1*= , 2*= , 3*= , 4*= , 5*=  }}
-
-{{!-- Item 4: 1*= , 2*= , 3*= , 4*= , 5*=  }}
-
-{{!-- Item 5: 1*= , 2*= , 3*= , 4*= , 5*=  }}
-
-{{!--How do we identify/utilize the required technologies 
-to make dynamic/updateable profiles that display to the user their
-current level of preparedness across our predetermined hard/soft item 
-list and self scoring system. We need the self scoring to interact 
-with the user's profile and the user's associated database,
-so that whenever a user's preparedness level changes they can easily 
-change their profile score(s) to update their/our database which then 
-updates their profile simultaneously. }}
-
-{{!-- Also we need to figure out the legend first before we can weight
-for an overall score algorithm that takes into account user self auditing
-feedback based on some aggregate}}
