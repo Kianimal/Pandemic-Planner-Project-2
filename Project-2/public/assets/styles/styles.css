@@ -3,7 +3,7 @@
 }
 body{
   color: white;
-  background-color: rgba(119, 117, 117, 0.7);
+  background-color: white;
   font-family: 'monDM Mono', monospace; 
 }
 /* Container for skill bars */
@@ -11,9 +11,9 @@ body{
   width: 100%; /* Full width */
   /* background-color: #ddd; Grey background */
 }
-#img{
-  margin-right: 500px;
-}
+/* #img{
+  margin-right: 200px;
+} */
 
 .skills {
   text-align: right; /* Right-align text */
