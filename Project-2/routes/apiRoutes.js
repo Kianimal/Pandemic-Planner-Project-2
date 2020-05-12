@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 var db = require("../models");
 
 module.exports = function(app) {
@@ -18,7 +19,13 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
+<<<<<<< HEAD
     db.User.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+=======
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
+>>>>>>> a23100d0f5ac5d86655625414da07204d01d2329
       res.json(dbExample);
     });
   });

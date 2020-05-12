@@ -1,8 +1,13 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "blappers",
     "database": "prepdb",
+=======
+    "password": "Kombuch@123",
+    "database": "exampledb",
+>>>>>>> a23100d0f5ac5d86655625414da07204d01d2329
     "host": "localhost",
     "dialect": "mysql"
   },
