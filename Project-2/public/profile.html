@@ -47,31 +47,153 @@
             </h1>
         </div>
     
-    <div class="row">
+    <div style="width:70%" class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3"><a href="#survey">Survey</a></li>
-                <li class="tab col s3"><a class="active" href="#profile">Profile</a></li>
+                <li class="tab col s3"><a class="active" href="#survey">Survey</a></li>
+                <li class="tab col s3"><a  href="#profile">Profile</a></li>
 
             </ul>
         </div>
-        <div id="survey" class="col s12"><a href="./survey2.html">Survey</a></div>
+        <!-- Survey Section -->
+        <div class="section gray">
+            <div class="row container">
+        <div id="survey" class="col s12"><a href="#survey"></a>
+            <div class="container">
+                <h1>Survey Questions</h1>
+                <hr>
+                <h2>Question 1</h2>
+                <h4>Shelter in place plan.</h4>
+                <select class="custom-select" id="q1" required>
+                    <option  value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree) -- No Plan</option>
+                    <option value="2">2 -- Limited Plan/No Rehers./No Docs.</option>
+                    <option value="3">3 -- Limited Plan/Limited Rehers./Docs. </option>
+                    <option value="4">4 -- Comprehensive Plan/Limited Rehers./ Docs.</option>
+                    <option value="5">5 (Strongly Agree) -- Comprehensive S@H Plan/Comprehensive Rehers./Docs.</option>
+                </select>
+                <h2>Question 2</h2>
+                <h4>Evacuation Plan.</h4>
+                <select class="custom-select" id="q2" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 3</h2>
+                <h4>Vehicle preparedness.</h4>
+                <select class="custom-select" id="q3" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 4</h2>
+                <h4>Emergency cash.</h4>
+                <select class="custom-select" id="q4" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 5</h2>
+                <h4>Food.</h4>
+                <select class="custom-select" id="q5" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 6</h2>
+                <h4>Medication/OTC Pharmaceuticals.</h4>
+                <select class="custom-select" id="q6" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 7</h2>
+                <h4>Sanitizer.</h4>
+                <select class="custom-select" id="q7" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 8</h2>
+                <h4>Toiletries.</h4>
+                <select class="custom-select" id="q8" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 9</h2>
+                <h4>Facemasks/Eye Protection.</h4>
+                <select class="custom-select" id="q9" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h2>Question 10</h2>
+                <h4>Portable Water Supplies.</h4>
+                <select class="custom-select" id="q10" required>
+                    <option value="">Select an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <br>
+                <br>
+                <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+                <br>
+                <br>
+                <footer><a href="/">← Back To Home</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+        
+        
+            <div id="modal-results" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Pandemic Score</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="margin: 0 auto;">
+                            <h5 id="pandemic-score" style="text-align: center;"></h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-        <!-- <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" href="./survey.html">Survey</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-    </ul> -->
     <!-- Profile section -->
         <div style="background-color:gray" id="profile" class="col s12">
             <!-- Profile image -->
@@ -124,6 +246,58 @@
             </div>
         </div>
     </div>
+    <!-- Jquery for Survey -->
+    <script>
+        
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+
+            function validateUser() {
+                var isValid = true;
+
+                $(".custom-select").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid
+            }
+            
+            if (validateUser()) {
+                var dataUser = {
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+            
+                console.log(dataUser)
+                var totalScore = ((dataUser.scores[0]*1.25) + (dataUser.scores[1]*0.75) + (dataUser.scores[2]*0.75) + (dataUser.scores[3]*1.25) + (dataUser.scores[4]*1.25) +
+                dataUser.scores[5] + dataUser.scores[6] + (dataUser.scores[7]*0.75) + 
+                dataUser.scores[8] + dataUser.scores[9])/10;
+                console.log(parseFloat(totalScore))
+                // $.post("/api/results", dataUser, function (data) {
+
+                //     // if a survey has data show matched modal
+
+                //     $("#pandemic-score").text(data.name)
+                //     $("#modal-results").modal("toggle")
+                // });
+            } else {
+                alert("Please fill out survey")
+            }
+        });
+
+    </script>
     <!-- Materialize JQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     </script>
@@ -134,6 +308,12 @@
         $(document).ready(function () {
             $('.tabs').tabs();
         });
+        $(document).ready(function () {
+                $('.parallax').parallax();
+            
+        });$(document).ready(function(){
+        $('select').formSelect();
+      });
     </script>
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -49,11 +49,11 @@
         <h4>Shelter in place plan.</h4>
         <select class="custom-select" id="q1" required>
             <option value="">Select an Option</option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="1">1 (Strongly Disagree) -- No Plan</option>
+            <option value="2">2 -- Limited Plan/No Rehers./No Docs.</option>
+            <option value="3">3 -- Limited Plan/Limited Rehers./Docs. </option>
+            <option value="4">4 -- Comprehensive Plan/Limited Rehers./ Docs.</option>
+            <option value="5">5 (Strongly Agree) -- Comprehensive S@H Plan/Comprehensive Rehers./Docs.</option>
         </select>
         <h2>Question 2</h2>
         <h4>Evacuation Plan.</h4>
@@ -174,6 +174,7 @@
         </div>
     </div>
     <script>
+        
         $("#submit").on("click", function (event) {
             event.preventDefault();
 
@@ -188,6 +189,7 @@
                 });
                 return isValid
             }
+            
             if (validateUser()) {
                 var dataUser = {
                     scores: [
@@ -203,15 +205,19 @@
                         $("#q10").val()
                     ]
                 };
+            
                 console.log(dataUser)
+                var totalScore = ((dataUser.scores[0]*1.25) + (dataUser.scores[1]*0.75) + (dataUser.scores[2]*0.75) + (dataUser.scores[3]*1.25) + (dataUser.scores[4]*1.25) +
+                dataUser.scores[5] + dataUser.scores[6] + (dataUser.scores[7]*0.75) + 
+                dataUser.scores[8] + dataUser.scores[9])/10;
+                console.log(parseFloat(totalScore))
+                // $.post("/api/results", dataUser, function (data) {
 
-                $.post("/api/results", dataUser, function (data) {
+                //     // if a survey has data show matched modal
 
-                    // if a survey has data show matched modal
-
-                    $("#pandemic-score").text(data.name)
-                    $("#modal-results").modal("toggle")
-                });
+                //     $("#pandemic-score").text(data.name)
+                //     $("#modal-results").modal("toggle")
+                // });
             } else {
                 alert("Please fill out survey")
             }
