@@ -70,7 +70,7 @@ var questions = [
     //     4: "$500-$5,000 cash on hand ",
     //     5: ">$5,000 cash on hand" 
     }];
-// var totalScore = ((user.shelter*1.25) + (user.evac*0.75) + (user.vehicle*0.75) + (user.cash*1.25) + (user.food*1.25) +
+// var totalScore = ((parseInt(id)*1.25) + (user.evac*0.75) + (user.vehicle*0.75) + (user.cash*1.25) + (user.food*1.25) +
 //                     user.medication + user.sanitizer + (user.toiletries*0.75) + 
 //                     user.faceProtection + user.water)/10;
 // function validateUser() {
@@ -91,8 +91,8 @@ var questions = [
 
 // if (validateUser()) {
 //     var dataUser = {
-//         name: $("#name").val(),
-//         scores: [
+//     
+//         questions: [
 //             $("#q1").val(),
 //             $("#q2").val(),
 //             $("#q3").val(),
@@ -119,10 +119,9 @@ var questions = [
 // }
                 
             
-//Populates question div one answer at a time
+//Populates question div one answer at a time <input class="with-gap" name="group1" type="radio"  /> name='answer'
 function populateQuestion(answer,id){
-    return ("<input id='" + id + "' class='btnAnswer' type='radio' name='answer' value='" + answer + 
-            "'> <span class='txtAnswer'>" + answer + "</span><br>");
+    return (`<p> <label><input id=${id} class='with-gap' type='radio' name='group1' value=${answer}> <span class='txtAnswer'>${answer}</span></p></label><br>`);
 }
 //Gets the answer and checks it against the right value
 function getAnswer(){
@@ -189,8 +188,8 @@ function loadQuestions(){
         qHead.textContent = "Pandemic Survey";
         $(qContent).empty();
         $(qContent).removeAttr("class");
-        $(qContent).html("<p class='txtQuestion txtCenter'>Pandemic Results</p>"+
-                            "<p class='txtAnswer txtCenter'>Answers: " + checkedAnswer + "</p>");
+        $(qContent).html(`<p class='txtQuestion txtCenter'>Pandemic Results</p>
+                            <p class='txtAnswer txtCenter'>Answers: ${checkedAnswer}</p>`);
 
         $(btn).css("visibility", "visible");
         $(btn).text("RESTART");
