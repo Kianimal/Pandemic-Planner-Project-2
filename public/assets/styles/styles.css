@@ -49,7 +49,7 @@ body{
 h1{
   text-align: center; 
 }
-h1 p{
+h2{
   font-family: 'Nanum Brush Script', cursive;
   font-size: 100px;
   font-weight: bold;
@@ -79,6 +79,20 @@ nav{
 .nav-link{
   color: black;
 }
+
+/* signin and sign up */
+  /* label color */
+  .input-field label {
+    color:#ffffff;
+  }
+  
+  .input-field input[type=email]{
+    color: #ffffff;
+  }
+  .input-field input[type=password]{
+    color: #ffffff;
+  }
+  
 button{
   background-color:black; 
   border-color:black;
