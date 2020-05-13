@@ -12,7 +12,7 @@ var API = {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
+      url: "api/users",
       data: JSON.stringify(example)
     });
   },
@@ -68,6 +68,8 @@ var handleFormSubmit = function(event) {
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim()
   };
+
+  console.log(example);
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
