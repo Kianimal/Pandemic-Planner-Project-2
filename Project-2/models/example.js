@@ -5,6 +5,16 @@ module.exports = function(sequelize, DataTypes) {
     username: DataTypes.STRING,
     userpass: DataTypes.STRING,
     email: DataTypes.STRING,
+    shelter: DataTypes.INTEGER,
+    evac: DataTypes.INTEGER,
+    vehicle: DataTypes.INTEGER,
+    cash: DataTypes.INTEGER,
+    food: DataTypes.INTEGER,
+    medication: DataTypes.INTEGER,
+    sanitizer: DataTypes.INTEGER,
+    toiletries: DataTypes.INTEGER,
+    masks: DataTypes.INTEGER,
+    water: DataTypes.INTEGER,
     score: DataTypes.INTEGER
   });
   return User;
