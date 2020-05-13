@@ -85,14 +85,16 @@ nav{
   .input-field label {
     color:#ffffff;
   }
-  
+  .input-field input[type=text]{
+    color: #ffffff;
+  }
   .input-field input[type=email]{
     color: #ffffff;
   }
   .input-field input[type=password]{
     color: #ffffff;
   }
-  
+
 button{
   background-color:black; 
   border-color:black;
