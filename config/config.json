@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "blappers",
+    "password": "",
     "database": "prepdb",
     "host": "localhost",
     "dialect": "mysql"
