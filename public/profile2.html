@@ -207,7 +207,7 @@
                 <img class="materialboxed" width="300" src="./assets/images/avataaars.png">
                 <!-- Profile image upload -->
                 <div class="input-field col s12 m6">
-                    <select class="icons">
+                    <select onchange="enableWager(this);" class="icons">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="" data-icon="./assets/images/avataaars.png">Person 1</option>
                         <option value="" data-icon="./assets/images/bearded man.jpg">Person 2</option>
@@ -323,6 +323,10 @@
         }); $(document).ready(function () {
             $('select').formSelect();
         });
+        function enableWager(obj) {
+    var icon = obj.options[obj.selectedIndex].getAttribute('data-icon');
+    // alert(icon);
+  };
     </script>
 </body>
 
