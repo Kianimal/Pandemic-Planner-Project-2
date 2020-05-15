@@ -41,7 +41,12 @@ module.exports = function(app) {
   app.get("/signup", function(req, res) {
     res.render("signup");
   });
-
+  app.get("/homepage", function(req, res) {
+    res.render("homepage", { title: "homepage", active: { Register: true } });
+  });
+  app.get("/profile", function(req, res) {
+    res.render("profile", { title: "profile", active: { Register: true } });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

@@ -94,10 +94,15 @@ nav{
   .input-field input[type=password]{
     color: #ffffff;
   }
-  img {
+ #profile_image{
     border-radius: 50%;
   }
-
+  #user_image{
+    border-radius: 50%;
+  }
+  #img{
+    border-radius: 50%;
+  }
 button{
   background-color:black; 
   border-color:black;

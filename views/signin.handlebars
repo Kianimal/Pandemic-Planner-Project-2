@@ -1,17 +1,17 @@
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo">Pandemic Planner</a>
+            <a class="{{#if active.signup}}active{{/if}}" href="/homepage" class="brand-logo">Pandemic Planner</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="./index">Pandemic Planner</a></li>
-                <li><a href="./signup">Sign Up</a></li>
+                <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+                <li><a lass="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="./index">Pandemic Planner</a></li>
-        <li><a href="./signup">Sign Up</a></li>
+        <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+        <li><a class="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
     </ul>
     <div class="container">
         <h1 style="color:black">Sign In</h1>
