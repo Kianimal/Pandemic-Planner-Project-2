@@ -1,17 +1,17 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">Pandemic Planner</a>
+        <a class="{{#if active.homepage}}active{{/if}}" href="/homepage" class="brand-logo">Pandemic Planner</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Pandemic Planner</a></li>
-            <li><a href="signout.html">Sign Out</a></li>
+            <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+            <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign Out</a></li>
         </ul>
     </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="index.html">Pandemic Planner</a></li>
-    <li><a href="signout.html">Sign Out</a></li>
+    <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+    <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign Out</a></li>
 </ul>
 <div class="container">
     <h1>Pandemic Planner
@@ -178,11 +178,11 @@
         <!-- Profile image -->
         <form>
             <div class="col s6">
-                <h4 id="username_image">Username</h4>
-                <img class="materialboxed" width="300" src="./assets/images/avataaars.png">
+                <h4 id="username_image">kylafitz</h4>
+                <img id="user_image" class="materialboxed" width="300" src="{{userImage}}">
                 <!-- Profile image upload -->
                 <div class="input-field col s12 m6">
-                    <select id="eventopponent" onchange="handleFormSubmit(this);" class="icons">
+                    <select id="eventopponent" onchange="handleImageSubmit(this);" class="icons">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="" data-icon="./assets/images/avataaars.png">Person 1</option>
                         <option value="" data-icon="./assets/images/bearded man.jpg">Person 2</option>
@@ -218,7 +218,7 @@
             <img id="img" class="materialboxed" width="300" src="./assets/images/zombie.png">
         </div>
         <div class="col s6">
-            <img style="text-align: right;" class="materialboxed" width="300" src="./assets/images/avataaars.png">
+            <img id="profile_image" style="text-align: right;" class="materialboxed" width="300" src="{{userImage}}">
         </div>
     </div>
     <div class="col s12">

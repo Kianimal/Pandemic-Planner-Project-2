@@ -15,7 +15,9 @@ module.exports = function(sequelize, DataTypes) {
     toiletries: DataTypes.INTEGER,
     masks: DataTypes.INTEGER,
     water: DataTypes.INTEGER,
-    score: DataTypes.FLOAT
+    score: DataTypes.FLOAT,
+    // eslint-disable-next-line camelcase
+    image_url: DataTypes.STRING
   });
   return User;
 };

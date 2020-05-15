@@ -1,40 +1,42 @@
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo">Pandemic Planner</a>
+            <a class="{{#if active.signup}}active{{/if}}" href="/homepage" class="brand-logo">Pandemic Planner</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="./index">Pandemic Planner</a></li>
-                <li><a href="./signup">Sign Up</a></li>
+                <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+                <li><a lass="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="./index">Pandemic Planner</a></li>
-        <li><a href="./signup">Sign Up</a></li>
+        <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
+        <li><a class="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
     </ul>
-    <div class="container">
-        <h1 style="color:black">Sign In</h1>
-        <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-              </div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
-            </form>
+    <h2>Enter at your own risk!</h2>
+  <div class="section black">
+    <div class="row container">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
           </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Password</label>
+            </div>
           </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script> $(document).ready(function () {
             $('.sidenav').sidenav();

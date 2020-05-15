@@ -1,61 +1,65 @@
 // Get references to page elements
-// var $icon = $("#eventopponet").attr("onchange");
+var $userImage = $("#user_image");
 var $usernameImage = $("#username_image");
+var $profileImage = $("#profile_image");
 
 // The API object contains methods for each kind of request we'll make
-var API = {
+var ImageAPI = {
   saveImage: function(user) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
-      type: "POST",
-      url: "api/user",
+      type: "PUT",
+      url: "api/users/" + $usernameImage.text(),
       data: JSON.stringify(user)
     });
   },
-  getusers: function() {
+  getImage: function() {
     return $.ajax({
       url: "api/users",
       type: "GET"
     });
   }
-  //   deleteuser: function(id) {
-  //     return $.ajax({
-  //       url: "api/users/" + id,
-  //       type: "DELETE"
-  //     });
-  //   }
 };
+//post image post img to db on load
+var handlePlaceholderImage = function() {
+  var image = "./assets/images/avataaars.png";
+  var placeholder = {
+    // eslint-disable-next-line camelcase
+    image_url: image
+  };
+  ImageAPI.saveImage(placeholder);
+};
+if ($userImage === "") {
+  handlePlaceholderImage();
+}
 
 // // refreshusers gets new images from the db and repopulates the list
+// eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
-  API.getusers().then(function(data) {
-    var $users = data.map(function(user) {
-      var $a = $("<a>")
-        .text(user.text)
-        .attr("href", "/user/" + user.id);
-    });
+  ImageAPI.getImage().then(function(userImage) {
+    console.log(userImage);
+    $userImage.attr("src", userImage[0].image_url);
+    $profileImage.attr("src", userImage[0].image_url);
   });
 };
+refreshusers();
 // handleFormSubmit is called whenever we submit a new user
 // Save the new user to the db and refresh the list
 // eslint-disable-next-line no-unused-vars
-var handleFormSubmit = function(obj) {
+var handleImageSubmit = function(obj) {
   //   event.preventDefault();
   var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
-
   var image = {
-    // eslint-disable-next-line camelcase
-    username: $usernameImage.val(),
     // eslint-disable-next-line camelcase
     image_url: icon
   };
 
   console.log(image);
 
-  API.saveImage(user).then(function() {
-    refreshImage();
+  ImageAPI.saveImage(image).then(function() {
+    refreshusers();
   });
 };
 
