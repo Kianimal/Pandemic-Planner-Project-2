@@ -16,7 +16,7 @@ var ImageAPI = {
   },
   getImage: function() {
     return $.ajax({
-      url: "api/users/",
+      url: "api/users",
       type: "GET"
     });
   }
@@ -26,9 +26,9 @@ var ImageAPI = {
 // eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
   ImageAPI.getImage().then(function(userImage) {
-    $userImage.attr("src", userImage);
+    console.log(userImage);
+    $userImage.attr("src", userImage[0].image_url);
   });
-  //   });
 };
 
 // handleFormSubmit is called whenever we submit a new user
@@ -39,8 +39,6 @@ var handleImageSubmit = function(obj) {
   var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
 
   var image = {
-    // eslint-disable-next-line camelcase
-    // username: $usernameImage.text(),
     // eslint-disable-next-line camelcase
     image_url: icon
   };
@@ -59,9 +57,3 @@ function enableWager(obj) {
   var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
   alert(icon);
 }
-// eslint-disable-next-line no-unused-vars
-// function LoadImages() {
-//   searchPic = new Image(100, 100);
-//   searchPic.src = "";
-//   // This is correct and the path is correct
-// }

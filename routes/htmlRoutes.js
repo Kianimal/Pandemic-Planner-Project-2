@@ -23,6 +23,7 @@ module.exports = function(app) {
     });
   });
 
+  //profile update image
   app.get("/profile/:username", function(req, res) {
     db.User.findOne({
       where: { username: req.params.username }
