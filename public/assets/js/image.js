@@ -1,6 +1,6 @@
 // Get references to page elements
 var $userImage = $("#user_image");
-var $usernameImage = $("#username_image")
+var $usernameImage = $("#username_image");
 
 // The API object contains methods for each kind of request we'll make
 var ImageAPI = {
@@ -14,27 +14,21 @@ var ImageAPI = {
       data: JSON.stringify(user)
     });
   },
-  getImage: function(user) {
+  getImage: function() {
     return $.ajax({
-      url: "api/users",
-      type: "GET",
-      data: JSON.stringify(user)
+      url: "api/users/",
+      type: "GET"
     });
   }
-  //   deleteuser: function(id) {
-  //     return $.ajax({
-  //       url: "api/users/" + id,
-  //       type: "DELETE"
-  //     });
-  //   }
 };
 
 // // refreshusers gets new images from the db and repopulates the list
 // eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
-  ImageAPI.getImage().then(function() {
-    $userImage.attr("src", User.image_url);
+  ImageAPI.getImage().then(function(userImage) {
+    $userImage.attr("src", userImage);
   });
+  //   });
 };
 
 // handleFormSubmit is called whenever we submit a new user
@@ -54,7 +48,7 @@ var handleImageSubmit = function(obj) {
   console.log(image);
 
   ImageAPI.saveImage(image).then(function() {
-    
+    refreshusers();
   });
 };
 

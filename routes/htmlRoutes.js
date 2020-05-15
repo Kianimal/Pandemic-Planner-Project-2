@@ -23,12 +23,12 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/profile/:image", function(req, res) {
-    db.User.findOne({ where: { username: req.params.username } }).then(function(
-      dbUser
-    ) {
+  app.get("/profile/:username", function(req, res) {
+    db.User.findOne({
+      where: { username: req.params.username }
+    }).then(function(dbUser) {
       res.render("profile", {
-        user: dbUser
+        userImage: dbUser
       });
     });
   });
