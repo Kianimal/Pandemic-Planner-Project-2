@@ -140,7 +140,7 @@
                     </select>
                     <br>
                     <br>
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <button id="submitAnswers" class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                     </button>
                     <br>
@@ -233,7 +233,6 @@
     $("#submit").on("click", function (event) {
         event.preventDefault();
 
-
         function validateUser() {
             var isValid = true;
 
@@ -242,7 +241,7 @@
                     isValid = false;
                 }
             });
-            return isValid
+            return isValid;
         }
 
         if (validateUser()) {
@@ -261,11 +260,11 @@
                 ]
             };
 
-            console.log(dataUser)
+            console.log(dataUser);
             var totalScore = ((dataUser.scores[0] * 1.25) + (dataUser.scores[1] * 0.75) + (dataUser.scores[2] * 0.75) + (dataUser.scores[3] * 1.25) + (dataUser.scores[4] * 1.25) +
                 dataUser.scores[5] + dataUser.scores[6] + (dataUser.scores[7] * 0.75) +
                 dataUser.scores[8] + dataUser.scores[9]) / 10;
-            console.log(parseFloat(totalScore))
+            console.log(parseFloat(totalScore));
             // $.post("/api/results", dataUser, function (data) {
 
             //     // if a survey has data show matched modal
@@ -274,7 +273,7 @@
             //     $("#modal-results").modal("toggle")
             // });
         } else {
-            alert("Please fill out survey")
+            alert("Please fill out survey");
         }
     });
 
@@ -282,6 +281,7 @@
 <!-- Materialize JQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="assets/js/image.js"></script>
+<script src="assets/js/assessment.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>$(document).ready(function () {
         $('.sidenav').sidenav();
