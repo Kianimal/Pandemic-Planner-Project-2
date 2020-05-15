@@ -94,6 +94,9 @@ nav{
   .input-field input[type=password]{
     color: #ffffff;
   }
+  img {
+    border-radius: 50%;
+  }
 
 button{
   background-color:black; 

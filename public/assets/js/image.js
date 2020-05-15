@@ -31,7 +31,10 @@ var handlePlaceholderImage = function() {
   };
   ImageAPI.saveImage(placeholder);
 };
-handlePlaceholderImage();
+if ($userImage === "") {
+  handlePlaceholderImage();
+}
+
 // // refreshusers gets new images from the db and repopulates the list
 // eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
