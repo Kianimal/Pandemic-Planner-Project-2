@@ -4,6 +4,16 @@ var $usernameImage = $("#username_image");
 
 // The API object contains methods for each kind of request we'll make
 var ImageAPI = {
+//   postImage: function(user) {
+//     return $.ajax({
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       type: "POST",
+//       url: "api/users/",
+//       data: JSON.stringify(user)
+//     });
+//   },
   saveImage: function(user) {
     return $.ajax({
       headers: {
@@ -21,7 +31,16 @@ var ImageAPI = {
     });
   }
 };
-
+//post image post img to db on load
+var handlePlaceholderImage = function() {
+  var image = "./assets/images/avataaars.png";
+  var placeholder = {
+    // eslint-disable-next-line camelcase
+    image_url: image
+  };
+  ImageAPI.saveImage(placeholder);
+};
+handlePlaceholderImage();
 // // refreshusers gets new images from the db and repopulates the list
 // eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
@@ -30,7 +49,7 @@ var refreshusers = function() {
     $userImage.attr("src", userImage[0].image_url);
   });
 };
-
+refreshusers();
 // handleFormSubmit is called whenever we submit a new user
 // Save the new user to the db and refresh the list
 // eslint-disable-next-line no-unused-vars

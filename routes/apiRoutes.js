@@ -18,7 +18,7 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
-  // Create a new example
+  // update image
   app.put("/api/users/:username", function(req, res) {
     var username = req.params.username;
     db.User.update(
