@@ -63,7 +63,6 @@ var API = {
 // Save the new user to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-  console.log("Handling Form");
 
   var user = {
     username: $username.val().trim(),
