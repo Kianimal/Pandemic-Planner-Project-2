@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     toiletries: DataTypes.INTEGER,
     masks: DataTypes.INTEGER,
     water: DataTypes.INTEGER,
-    score: DataTypes.INTEGER
+    score: DataTypes.FLOAT
   });
   return User;
 };
