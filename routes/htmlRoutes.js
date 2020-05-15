@@ -23,8 +23,14 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/profile", function(req, res) {
-    res.render("profile");
+  app.get("/profile/:image", function(req, res) {
+    db.User.findOne({ where: { username: req.params.username } }).then(function(
+      dbUser
+    ) {
+      res.render("profile", {
+        user: dbUser
+      });
+    });
   });
 
   app.get("/signin", function(req, res) {

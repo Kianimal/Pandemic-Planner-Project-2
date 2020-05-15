@@ -1,6 +1,6 @@
 // Get references to page elements
-// var $image = $(".selected");
-var $submitBtn = $("#image_submit");
+// var $icon = $("#eventopponet").attr("onchange");
+var $usernameImage = $("#username_image");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -10,7 +10,7 @@ var API = {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/users",
+      url: "api/user",
       data: JSON.stringify(user)
     });
   },
@@ -28,43 +28,31 @@ var API = {
   //   }
 };
 
-// // refreshusers gets new users from the db and repopulates the list
-// var refreshImage = function() {
-//   API.getImage().then(function(data) {
-//     var $imageUrl = data.map(function(image) {
-//       var $a = $("<a>").attr("href", "/user/" + user.id);
-
-//       var $li = $("<li>")
-//         .attr({
-//           class: "list-group-item",
-//           "data-id": user.id
-//         })
-//         .append($a);
-
-//       return $li;
-//     });
-
-//     $userList.empty();
-//     $userList.append($imageUrl);
-//   });
-// };
-
+// // refreshusers gets new images from the db and repopulates the list
+var refreshusers = function() {
+  API.getusers().then(function(data) {
+    var $users = data.map(function(user) {
+      var $a = $("<a>")
+        .text(user.text)
+        .attr("href", "/user/" + user.id);
+    });
+  });
+};
 // handleFormSubmit is called whenever we submit a new user
 // Save the new user to the db and refresh the list
-var handleFormSubmit = function(event) {
-  event.preventDefault();
+// eslint-disable-next-line no-unused-vars
+var handleFormSubmit = function(obj) {
+  //   event.preventDefault();
+  var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
 
   var image = {
+    // eslint-disable-next-line camelcase
+    username: $usernameImage.val(),
     // eslint-disable-next-line camelcase
     image_url: icon
   };
 
   console.log(image);
-
-  if (!user.image) {
-    alert("You must select an image!");
-    return;
-  }
 
   API.saveImage(user).then(function() {
     refreshImage();
@@ -72,5 +60,9 @@ var handleFormSubmit = function(event) {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
 
+// eslint-disable-next-line no-unused-vars
+function enableWager(obj) {
+  var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
+  alert(icon);
+}

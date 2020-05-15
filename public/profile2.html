@@ -203,10 +203,24 @@
         <!-- Profile section -->
         <div style="background-color:gray" id="profile" class="col s12">
             <!-- Profile image -->
+            <!-- <form> -->
             <div class="col s6">
+                <button id=image_button>
+                    <input type="file">
                 <img class="materialboxed" width="300" src="./assets/images/avataaars.png">
-                <!-- Profile image upload -->
-                <div class="input-field col s12 m6">
+            </button><!-- Profile image upload -->
+                <!-- <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </form> -->
+                <!-- <div class="input-field col s12 m6">
                     <select onchange="enableWager(this);" class="icons">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="" data-icon="./assets/images/avataaars.png">Person 1</option>
@@ -218,12 +232,12 @@
                         <option value="" data-icon="./assets/images/woman 2.jpg">Person 7</option>
                     </select>
                     <label>Select your avatar</label>
-                </div>
-                <br>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                </div> -->
+                <!-- <br>
+                <button id="image_submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                 </button>
-                </form>
+                </form> -->
             </div>
             <div class="col s6">
                 <h1>Score: 5</h1>
@@ -325,8 +339,21 @@
         });
         function enableWager(obj) {
     var icon = obj.options[obj.selectedIndex].getAttribute('data-icon');
-    // alert(icon);
+    alert(icon);
   };
+//   $("#image_submit").on("click", function(event){
+// event.preventDefault()
+// alert("click!")
+
+//   })
+//   window.addEventListener('load', function () {
+//   document.querySelector('input[type="file"]').addEventListener('change', function() {
+//     if (this.files && this.files[0]) {
+//       var img = document.querySelector('img'); // $('img')[0]
+//       img.src = URL.createObjectURL(this.files[0]); // set src to file url
+//     }
+//   });
+// });
     </script>
 </body>
 
