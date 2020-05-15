@@ -1,18 +1,15 @@
 // Get references to page elements
-// var $icon = $("#eventopponet").attr("onchange");
 var $usernameImage = $("#username_image");
-// eslint-disable-next-line camelcase
-var image_url = data.image_url;
 
 // The API object contains methods for each kind of request we'll make
-var API = {
+var ImageAPI = {
   saveImage: function(user) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
-      type: "POST",
-      url: "api/users",
+      type: "PUT",
+      url: "api/users/" + $usernameImage.text(),
       data: JSON.stringify(user)
     });
   },
@@ -33,7 +30,7 @@ var API = {
 // // refreshusers gets new images from the db and repopulates the list
 // eslint-disable-next-line no-unused-vars
 var refreshusers = function() {
-  API.getusers().then(function() {
+  ImageAPI.getusers().then(function() {
     $usernameImage.attr("src", image_url);
   });
 };
@@ -41,20 +38,20 @@ var refreshusers = function() {
 // handleFormSubmit is called whenever we submit a new user
 // Save the new user to the db and refresh the list
 // eslint-disable-next-line no-unused-vars
-var handleFormSubmit = function(obj) {
+var handleImageSubmit = function(obj) {
   //   event.preventDefault();
   var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
 
   var image = {
     // eslint-disable-next-line camelcase
-    username: $usernameImage.text(),
+    // username: $usernameImage.text(),
     // eslint-disable-next-line camelcase
     image_url: icon
   };
 
   console.log(image);
 
-  API.saveImage(image).then(function() {
+  ImageAPI.saveImage(image).then(function() {
     refreshusers();
   });
 };
