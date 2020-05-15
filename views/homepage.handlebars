@@ -15,68 +15,54 @@
     <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign In</a></li>
     <li><a class="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
 </ul>
-<div class="container">
-    <h1 id="title">
-        Pandemic Planner:
-
-        <p>Zombie Edition</p>
-    </h1>
-</div>
-<div class="parallax-container">
-    <div class="parallax"><img src="./assets/images/cdc_zombie_comic.jpg"></div>
-</div>
-<div class="section black">
-    <div class="row container">
-        <div id="pandemic_survey_results">
-            <h2 class="header">Pandemic Survey Results</h2>
-            <canvas id="chartjs-4" class="chartjs" width="1172" height="586"
-                style="display: block; height: 293px; width: 586px; justify-content: center;"></canvas>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-            <script>
-                var ctx = document.getElementById("chartjs-4");
-                var myPieChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ["Red", "Blue", "Yellow"],
-                        datasets: [{
-                            label: "Pandemic Dataset",
-                            data: [300, 50, 100],
-                            backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"]
-                        }]
-                    }
-
-                });
-            </script>
-
-            <p> Results of average cases during pandemic after taking the survey</p>
+<div class="parallax-container zombie">
+        <div class="container">
+            <h1 id="title"> Pandemic Planner:</h1>
+            <h2>Zombie Edition</h2>
+            <div class="zombie" style="text-align: center;"><img src="./assets/images/zombie.png"></div>
         </div>
+        <div class="parallax"></div>
     </div>
-</div>
-<div class="parallax-container">
-    <div class="parallax"><img src="./assets/images/cdc_zombie_comic.jpg"></div>
-</div>
+    <div class="section black">
+        <div class="row container">
+            <div id="pandemic_survey_results">
+                <h2 class="header">Pandemic Survey Results</h2>
+                <canvas id="chartjs-4" class="chartjs" width="1172" height="586"
+                    style="display: block; height: 293px; width: 586px; justify-content: center;"></canvas>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+                <script>
+                    var ctx = document.getElementById("chartjs-4");
+                    var myPieChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ["Red", "Blue", "Yellow"],
+                            datasets: [{
+                                label: "Pandemic Dataset",
+                                data: [300, 50, 100],
+                                backgroundColor: ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"]
+                            }]
+                        }
 
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text"><a class="grey-text text-lighten-3" href="#title">Pandemic Planner</a> </h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#pandemic_survey_results">Pandemic Survey
-                            Results</a></li>
-                    <li><a class="grey-text text-lighten-3" href="signin.html">Sign In</a></li>
-                    <li><a class="grey-text text-lighten-3" href="signup.html">Sign Up</a></li>
-                </ul>
+                    });
+                </script>
+
+                <p> Results of average cases during pandemic after taking the survey</p>
             </div>
         </div>
     </div>
-
-    <div class="footer-copyright">
-        <div class="container">
-            © 2020 Copyright Pandemic Planner
-        </div>
+    
+    <div class="parallax-container">
+        <div class="parallax">
+       </div>
     </div>
-</footer>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright Pandemic Planner
+            </div>
+        </div>
+    </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script> $(document).ready(function () {
