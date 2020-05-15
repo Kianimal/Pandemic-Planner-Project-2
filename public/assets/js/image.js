@@ -1,19 +1,10 @@
 // Get references to page elements
 var $userImage = $("#user_image");
 var $usernameImage = $("#username_image");
+var $profileImage = $("#profile_image");
 
 // The API object contains methods for each kind of request we'll make
 var ImageAPI = {
-//   postImage: function(user) {
-//     return $.ajax({
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       type: "POST",
-//       url: "api/users/",
-//       data: JSON.stringify(user)
-//     });
-//   },
   saveImage: function(user) {
     return $.ajax({
       headers: {
@@ -47,6 +38,7 @@ var refreshusers = function() {
   ImageAPI.getImage().then(function(userImage) {
     console.log(userImage);
     $userImage.attr("src", userImage[0].image_url);
+    $profileImage.attr("src", userImage[0].image_url);
   });
 };
 refreshusers();
@@ -56,7 +48,6 @@ refreshusers();
 var handleImageSubmit = function(obj) {
   //   event.preventDefault();
   var icon = obj.options[obj.selectedIndex].getAttribute("data-icon");
-
   var image = {
     // eslint-disable-next-line camelcase
     image_url: icon
