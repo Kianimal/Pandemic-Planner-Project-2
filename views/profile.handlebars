@@ -3,14 +3,12 @@
         <a class="{{#if active.homepage}}active{{/if}}" href="/homepage" class="brand-logo">Pandemic Planner</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
             <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign Out</a></li>
         </ul>
     </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a class="{{#if active.homepage}}active{{/if}}" href="/homepage">Pandemic Planner</a></li>
     <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign Out</a></li>
 </ul>
 <div class="container">
@@ -31,10 +29,8 @@
         <div class="row container">
             <div id="survey" class="col s12"><a href="#survey"></a>
                 <div class="container">
-                    <h1>Survey Questions</h1>
-                    <hr>
                     <h2>Question 1</h2>
-                    <h4>Shelter in place plan.</h4>
+                    <h4>Do you have a shelter in place plan?</h4>
                     <select class="custom-select" id="q1" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- No Plan</option>
@@ -45,7 +41,7 @@
                         </option>
                     </select>
                     <h2>Question 2</h2>
-                    <h4>Evacuation Plan.</h4>
+                    <h4>Do you have an evacuation plan?</h4>
                     <select class="custom-select" id="q2" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- No Plan</option>
@@ -55,7 +51,7 @@
                         <option value="5">5 (Strongly Agree) -- Comprehensive/Practiced Evac. Plan</option>
                     </select>
                     <h2>Question 3</h2>
-                    <h4>Vehicle preparedness.</h4>
+                    <h4>Do you have a vehicle or a way to get out of the area?</h4>
                     <select class="custom-select" id="q3" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- No Easy Vehicle Access</option>
@@ -67,7 +63,7 @@
                         <option value="5">5 (Strongly Agree) -- Long Distance Vehicle on Hand.</option>
                     </select>
                     <h2>Question 4</h2>
-                    <h4>Emergency cash.</h4>
+                    <h4>Do you have access to emergency funds in the form of cash?</h4>
                     <select class="custom-select" id="q4" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- Little to no cash on hand</option>
@@ -77,7 +73,7 @@
                         <option value="5">5 (Strongly Agree) -- >$5,000 cash on hand</option>
                     </select>
                     <h2>Question 5</h2>
-                    <h4>Food.</h4>
+                    <h4>Do you have food/rations available and ready?</h4>
                     <select class="custom-select" id="q5" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- none < 1 week of food supply</option>
@@ -87,7 +83,7 @@
                         <option value="5">5 (Strongly Agree) -- >1 year food supply</option>
                     </select>
                     <h2>Question 6</h2>
-                    <h4>Medication/OTC Pharmaceuticals.</h4>
+                    <h4>Do you have medication/OTC pharmaceuticals on hand?</h4>
                     <select class="custom-select" id="q6" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- none to < 1 week med. supply</option>
@@ -97,7 +93,7 @@
                         <option value="5">5 (Strongly Agree) -- > 1 year med. supplies</option>
                     </select>
                     <h2>Question 7</h2>
-                    <h4>Sanitizer.</h4>
+                    <h4>Do you have hand sanitizer?</h4>
                     <select class="custom-select" id="q7" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- none to < 1 week supply</option>
@@ -107,7 +103,7 @@
                         <option value="5">5 (Strongly Agree) -- >1 year sanitizer supplies</option>
                     </select>
                     <h2>Question 8</h2>
-                    <h4>Toiletries.</h4>
+                    <h4>Do you have toiletries?</h4>
                     <select class="custom-select" id="q8" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- none to < 1 week supply</option>
@@ -117,7 +113,7 @@
                         <option value="5">5 (Strongly Agree) -- >1 year toiletry supplies</option>
                     </select>
                     <h2>Question 9</h2>
-                    <h4>Facemasks/Eye Protection.</h4>
+                    <h4>Do you have available facemasks/eye protection?</h4>
                     <select class="custom-select" id="q9" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- none to < 1 week supply </option>
@@ -128,7 +124,7 @@
                         </option>
                     </select>
                     <h2>Question 10</h2>
-                    <h4>Portable Water Supplies.</h4>
+                    <h4>Do you have clean and portable water?</h4>
                     <select class="custom-select" id="q10" required>
                         <option value="">Select an Option</option>
                         <option value="1">1 (Strongly Disagree) -- no water or dirty water only.</option>
@@ -143,34 +139,9 @@
                     <button id="submitAnswers" class="btn waves-effect waves-light" type="submit" name="action">Submit
                         <i class="material-icons right">send</i>
                     </button>
-                    <br>
-                    <br>
-                    <footer><a href="/">← Back To Home</a>
-                    </footer>
                 </div>
             </div>
         </div>
-
-
-        <div id="modal-results" class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Pandemic Score</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" style="margin: 0 auto;">
-                        <h5 id="pandemic-score" style="text-align: center;"></h5>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Profile section -->
     <div class="row container">
@@ -198,19 +169,11 @@
         </form>
     </div>
     <div class="col s6">
-        <h1>Score: 5</h1>
-        <p>This will be text about the the players results:
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip
-            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-        </p>
+        <h1>Score:<span id="scorenumber">5</span></h1>
+        <h4 id="score">This will be text about the results.
+        </h4>
     </div>
-    </div>
+    
     <!-- Assessment Results -->
     <div class="col s12">
         <p>From zombie to human, how prepared are you?</p>
@@ -227,59 +190,19 @@
 </div>
 </div>
 </div>
-<!-- Jquery for Survey -->
-<script>
+</div>
 
-    $("#submit").on("click", function (event) {
-        event.preventDefault();
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2020 Copyright Pandemic Planner
+        </div>
+    </div>
+</footer>
 
-        function validateUser() {
-            var isValid = true;
-
-            $(".custom-select").each(function () {
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-            return isValid;
-        }
-
-        if (validateUser()) {
-            var dataUser = {
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
-
-            console.log(dataUser);
-            var totalScore = ((dataUser.scores[0] * 1.25) + (dataUser.scores[1] * 0.75) + (dataUser.scores[2] * 0.75) + (dataUser.scores[3] * 1.25) + (dataUser.scores[4] * 1.25) +
-                dataUser.scores[5] + dataUser.scores[6] + (dataUser.scores[7] * 0.75) +
-                dataUser.scores[8] + dataUser.scores[9]) / 10;
-            console.log(parseFloat(totalScore));
-            // $.post("/api/results", dataUser, function (data) {
-
-            //     // if a survey has data show matched modal
-
-            //     $("#pandemic-score").text(data.name)
-            //     $("#modal-results").modal("toggle")
-            // });
-        } else {
-            alert("Please fill out survey");
-        }
-    });
-
-</script>
 <!-- Materialize JQuery -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/score.js"></script>
 <script src="assets/js/image.js"></script>
 <script src="assets/js/assessment.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -5,6 +5,7 @@ body{
   color: white;
   background-color: gray;
   font-family: 'monDM Mono', monospace; 
+  font-size: 30px;
 }
 /* tabs */
 .tabs .tab a{
@@ -34,9 +35,7 @@ body{
   width: 100%; /* Full width */
   /* background-color: #ddd; Grey background */
 }
-/* #img{
-  margin-right: 200px;
-} */
+
 
 .skills {
   text-align: right; /* Right-align text */
@@ -48,15 +47,15 @@ body{
 .html {width: 90%; background-color: #4CAF50;} /* Green */
 h1{
   text-align: center; 
+  text-shadow: 4px 4px black;
 }
 h2{
   font-family: 'Nanum Brush Script', cursive;
   font-size: 100px;
   font-weight: bold;
   color: green;
-}
-h2{
   text-align: center;
+  text-shadow: 4px 4px black;
 }
 p{
   text-align: center;
