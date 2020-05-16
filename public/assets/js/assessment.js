@@ -28,7 +28,7 @@ var API = {
 };
 
 var handleFormSubmit = function(event) {
-  // event.preventDefault();
+  event.preventDefault();
   console.log("CLICKED");
 
   var totalScore =
