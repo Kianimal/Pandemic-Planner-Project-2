@@ -4,18 +4,15 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all examples
   app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(dbExamples) {
-      console.log(dbExamples);
-      res.json(dbExamples);
+    db.User.findAll({}).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 
   // Create a new example
   app.post("/api/users", function(req, res) {
-    db.User.create(req.body).then(function(dbExample) {
-      console.log(dbExample);
-      console.log(req.body);
-      res.json(dbExample);
+    db.User.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
   // update image
@@ -31,10 +28,10 @@ module.exports = function(app) {
           username: username
         }
       }
-    ).then(function(dbExample) {
-      console.log(dbExample);
+    ).then(function(dbReturn) {
+      console.log(dbReturn);
       console.log(req.body);
-      res.json(dbExample);
+      res.json(dbReturn);
     });
   });
 
