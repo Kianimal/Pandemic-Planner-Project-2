@@ -43,4 +43,12 @@ $(document).ready(function() {
   }
 
   getScore();
+
+  var score = $("#scorenumber").text();
+  var int = parseInt(score);
+  var percent = (int / 5) * 100;
+  $(".determinate").width(percent + "%");
+  $("#percent").append(
+    "<h5 class='col s2 right align'>" + percent + "%" + "</h5>"
+  );
 });

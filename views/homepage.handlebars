@@ -15,33 +15,41 @@
     <li><a class="{{#if active.signin}}active{{/if}}" href="/signin">Sign In</a></li>
     <li><a class="{{#if active.signup}}active{{/if}}" href="/signup">Sign Up</a></li>
 </ul>
-<div class="parallax-container zombie">
-    <div class="container">
-        <h1 id="title"> Pandemic Planner:</h1>
-        <h2>Zombie Edition</h2>
-        <div class="zombie" style="text-align: center;"><img src="./assets/images/zombie.png"></div>
+<div class="parallax-container zombie" style="z-index:-1" >
+        <div class="container">
+            <h1 id="title"> Pandemic Planner:</h1>
+            <h2>Zombie Edition</h2>
+            <div class="zombie" style="text-align: center;">
+                <img style="width: 500;" src="./assets/images/zombie.png"></div>
+        </div>
+        <div class="parallax">
+        </div>
     </div>
-    <div class="parallax"></div>
-</div>
-<div class="section black">
+<div class="section black" style="margin-top:-40px;" >
     <div class="row container">
         <div id="pandemic_survey_results">
             <h2 class="header">How it works</h2>
-            <p>Designed to work dynamically to show the user how prepared they are in the event of a pandemic</p>
+            
+            <p><li>Designed to work dynamically to show the user how prepared they are in the event of a pandemic</p>
             <br>
-            <p>User creates their own profile</p>
+            <p><li>User creates their own profile</p>
             <br>
-            <p>They are able to take a survey to determine their level of preparedness which will then show them a
+            <p><li>They are able to take a survey to determine their level of preparedness which will then show them a
                 score.</p>
             <br>
-            <p>The score will be algorithmic.
-                Level of preparedness will range on a scale from human to zombie</p>
+            <p><li>The score will be algorithmic.
+                Level of preparedness will range on a scale from zombie to human</li></p>
         </div>
     </div>
 </div>
 
 <div class="parallax-container">
-    <div class="parallax">
+    <div class="parallax"><h2>Are you prepared?</h2>
+    <h1>Sign up to find out!</h1>
+    <div style="text-align: center">
+        <br>
+    <a class="{{#if active.signup}}active{{/if}}" href="./signup"></a><button class="waves-effect waves-light btn" name="action" >Sign up</button></a>
+                  </div>
     </div>
 </div>
 

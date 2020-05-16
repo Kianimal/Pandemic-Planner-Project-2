@@ -100,12 +100,26 @@ nav{
     border-radius: 50%;
   }
   #img{
-    border-radius: 50%;
+    border-radius: 40%;
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
   }
 button{
   background-color:black; 
   border-color:black;
 }
+li{
+  text-align: center;
+}
 .footer-copyright{
   text-align:center;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 750px) {
+  img {
+    width:200px;
+  }
 }
