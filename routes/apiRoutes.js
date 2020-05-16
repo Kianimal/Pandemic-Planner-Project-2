@@ -1,5 +1,5 @@
 /* eslint-disable indent */
-var db = require("../models/example.js");
+var db = require("../models");
 
 module.exports = function (app) {
   // Get all examples
