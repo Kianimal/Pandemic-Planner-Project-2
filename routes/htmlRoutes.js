@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("profile");
+    res.render("homepage");
     // db.User.findAll({}).then(function(dbUser) {
     //   res.render("index", {
     //     msg: "HELLO!",
@@ -23,6 +23,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/userid/:id", function(req, res) {
+    db.User.findOne({ where: { id: req.params.id } }).then(function(dbUser) {
+      res.render("user", {
+        user: dbUser
+      });
+    });
+  });
+
   //profile update image
   app.get("/profile/:username", function(req, res) {
     db.User.findOne({
@@ -30,6 +38,16 @@ module.exports = function(app) {
     }).then(function(dbUser) {
       res.render("profile", {
         userImage: dbUser
+      });
+    });
+  });
+
+  app.get("/profile/:username", function(req, res) {
+    db.User.findOne({
+      where: { username: req.params.username }
+    }).then(function(dbUser) {
+      res.render("profile", {
+        username: dbUser.username
       });
     });
   });

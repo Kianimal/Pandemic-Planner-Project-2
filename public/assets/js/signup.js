@@ -16,48 +16,7 @@ var API = {
       data: JSON.stringify(user)
     });
   }
-  //   getusers: function() {
-  //     return $.ajax({
-  //       url: "api/users",
-  //       type: "GET"
-  //     });
-  //   },
-  //   deleteuser: function(id) {
-  //     return $.ajax({
-  //       url: "api/users/" + id,
-  //       type: "DELETE"
-  //     });
-  //   }
 };
-
-// // refreshusers gets new users from the db and repopulates the list
-// var refreshusers = function() {
-//   API.getusers().then(function(data) {
-//     var $users = data.map(function(user) {
-//       var $a = $("<a>")
-//         .text(user.text)
-//         .attr("href", "/user/" + user.id);
-
-//       var $li = $("<li>")
-//         .attr({
-//           class: "list-group-item",
-//           "data-id": user.id
-//         })
-//         .append($a);
-
-//       var $button = $("<button>")
-//         .addClass("btn btn-danger float-right delete")
-//         .text("ｘ");
-
-//       $li.append($button);
-
-//       return $li;
-//     });
-
-//     $userList.empty();
-//     $userList.append($users);
-//   });
-// };
 
 // handleFormSubmit is called whenever we submit a new user
 // Save the new user to the db and refresh the list
